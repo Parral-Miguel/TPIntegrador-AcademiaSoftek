@@ -8,105 +8,109 @@ build_property.PlatformNeutralAssembly =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = TPFinal_ParralMiguel
 build_property.RootNamespace = TPFinal_ParralMiguel
-build_property.ProjectDir = C:\Users\parra\source\repos\TPFinal-ParralMiguel\TPFinal-ParralMiguel\
+build_property.ProjectDir = C:\Users\parra\Desktop\TPIntegrador-AcademiaSoftek\TPFinal-ParralMiguel\
 build_property.RazorLangVersion = 6.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = true
-build_property.MSBuildProjectDirectory = C:\Users\parra\source\repos\TPFinal-ParralMiguel\TPFinal-ParralMiguel
+build_property.MSBuildProjectDirectory = C:\Users\parra\Desktop\TPIntegrador-AcademiaSoftek\TPFinal-ParralMiguel
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/parra/source/repos/TPFinal-ParralMiguel/TPFinal-ParralMiguel/Views/Home/Index.cshtml]
+[C:/Users/parra/Desktop/TPIntegrador-AcademiaSoftek/TPFinal-ParralMiguel/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/parra/source/repos/TPFinal-ParralMiguel/TPFinal-ParralMiguel/Views/Home/Privacy.cshtml]
+[C:/Users/parra/Desktop/TPIntegrador-AcademiaSoftek/TPFinal-ParralMiguel/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/parra/source/repos/TPFinal-ParralMiguel/TPFinal-ParralMiguel/Views/Login/Index.cshtml]
+[C:/Users/parra/Desktop/TPIntegrador-AcademiaSoftek/TPFinal-ParralMiguel/Views/Login/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTG9naW5cSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/parra/source/repos/TPFinal-ParralMiguel/TPFinal-ParralMiguel/Views/Login/Registrar.cshtml]
+[C:/Users/parra/Desktop/TPIntegrador-AcademiaSoftek/TPFinal-ParralMiguel/Views/Login/Registrar.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTG9naW5cUmVnaXN0cmFyLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/parra/source/repos/TPFinal-ParralMiguel/TPFinal-ParralMiguel/Views/Pedidos/Create.cshtml]
+[C:/Users/parra/Desktop/TPIntegrador-AcademiaSoftek/TPFinal-ParralMiguel/Views/Pedidos/Agregar.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGVkaWRvc1xBZ3JlZ2FyLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/parra/Desktop/TPIntegrador-AcademiaSoftek/TPFinal-ParralMiguel/Views/Pedidos/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGVkaWRvc1xDcmVhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/parra/source/repos/TPFinal-ParralMiguel/TPFinal-ParralMiguel/Views/Pedidos/Delete.cshtml]
+[C:/Users/parra/Desktop/TPIntegrador-AcademiaSoftek/TPFinal-ParralMiguel/Views/Pedidos/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGVkaWRvc1xEZWxldGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/parra/source/repos/TPFinal-ParralMiguel/TPFinal-ParralMiguel/Views/Pedidos/Details.cshtml]
+[C:/Users/parra/Desktop/TPIntegrador-AcademiaSoftek/TPFinal-ParralMiguel/Views/Pedidos/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGVkaWRvc1xEZXRhaWxzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/parra/source/repos/TPFinal-ParralMiguel/TPFinal-ParralMiguel/Views/Pedidos/Edit.cshtml]
+[C:/Users/parra/Desktop/TPIntegrador-AcademiaSoftek/TPFinal-ParralMiguel/Views/Pedidos/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGVkaWRvc1xFZGl0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/parra/source/repos/TPFinal-ParralMiguel/TPFinal-ParralMiguel/Views/Pedidos/Index.cshtml]
+[C:/Users/parra/Desktop/TPIntegrador-AcademiaSoftek/TPFinal-ParralMiguel/Views/Pedidos/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGVkaWRvc1xJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/parra/source/repos/TPFinal-ParralMiguel/TPFinal-ParralMiguel/Views/Platos/Create.cshtml]
+[C:/Users/parra/Desktop/TPIntegrador-AcademiaSoftek/TPFinal-ParralMiguel/Views/Platos/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGxhdG9zXENyZWF0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/parra/source/repos/TPFinal-ParralMiguel/TPFinal-ParralMiguel/Views/Platos/Delete.cshtml]
+[C:/Users/parra/Desktop/TPIntegrador-AcademiaSoftek/TPFinal-ParralMiguel/Views/Platos/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGxhdG9zXERlbGV0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/parra/source/repos/TPFinal-ParralMiguel/TPFinal-ParralMiguel/Views/Platos/Details.cshtml]
+[C:/Users/parra/Desktop/TPIntegrador-AcademiaSoftek/TPFinal-ParralMiguel/Views/Platos/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGxhdG9zXERldGFpbHMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/parra/source/repos/TPFinal-ParralMiguel/TPFinal-ParralMiguel/Views/Platos/Edit.cshtml]
+[C:/Users/parra/Desktop/TPIntegrador-AcademiaSoftek/TPFinal-ParralMiguel/Views/Platos/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGxhdG9zXEVkaXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/parra/source/repos/TPFinal-ParralMiguel/TPFinal-ParralMiguel/Views/Platos/Index.cshtml]
+[C:/Users/parra/Desktop/TPIntegrador-AcademiaSoftek/TPFinal-ParralMiguel/Views/Platos/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGxhdG9zXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/parra/source/repos/TPFinal-ParralMiguel/TPFinal-ParralMiguel/Views/Shared/Error.cshtml]
+[C:/Users/parra/Desktop/TPIntegrador-AcademiaSoftek/TPFinal-ParralMiguel/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/parra/source/repos/TPFinal-ParralMiguel/TPFinal-ParralMiguel/Views/Shared/_ValidationScriptsPartial.cshtml]
+[C:/Users/parra/Desktop/TPIntegrador-AcademiaSoftek/TPFinal-ParralMiguel/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/parra/source/repos/TPFinal-ParralMiguel/TPFinal-ParralMiguel/Views/Usuarios/Create.cshtml]
+[C:/Users/parra/Desktop/TPIntegrador-AcademiaSoftek/TPFinal-ParralMiguel/Views/Usuarios/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXN1YXJpb3NcQ3JlYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/parra/source/repos/TPFinal-ParralMiguel/TPFinal-ParralMiguel/Views/Usuarios/Delete.cshtml]
+[C:/Users/parra/Desktop/TPIntegrador-AcademiaSoftek/TPFinal-ParralMiguel/Views/Usuarios/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXN1YXJpb3NcRGVsZXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/parra/source/repos/TPFinal-ParralMiguel/TPFinal-ParralMiguel/Views/Usuarios/Details.cshtml]
+[C:/Users/parra/Desktop/TPIntegrador-AcademiaSoftek/TPFinal-ParralMiguel/Views/Usuarios/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXN1YXJpb3NcRGV0YWlscy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/parra/source/repos/TPFinal-ParralMiguel/TPFinal-ParralMiguel/Views/Usuarios/Edit.cshtml]
+[C:/Users/parra/Desktop/TPIntegrador-AcademiaSoftek/TPFinal-ParralMiguel/Views/Usuarios/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXN1YXJpb3NcRWRpdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/parra/source/repos/TPFinal-ParralMiguel/TPFinal-ParralMiguel/Views/Usuarios/Index.cshtml]
+[C:/Users/parra/Desktop/TPIntegrador-AcademiaSoftek/TPFinal-ParralMiguel/Views/Usuarios/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXN1YXJpb3NcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/parra/source/repos/TPFinal-ParralMiguel/TPFinal-ParralMiguel/Views/_ViewImports.cshtml]
+[C:/Users/parra/Desktop/TPIntegrador-AcademiaSoftek/TPFinal-ParralMiguel/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/parra/source/repos/TPFinal-ParralMiguel/TPFinal-ParralMiguel/Views/_ViewStart.cshtml]
+[C:/Users/parra/Desktop/TPIntegrador-AcademiaSoftek/TPFinal-ParralMiguel/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/parra/source/repos/TPFinal-ParralMiguel/TPFinal-ParralMiguel/Views/Shared/_Layout.cshtml]
+[C:/Users/parra/Desktop/TPIntegrador-AcademiaSoftek/TPFinal-ParralMiguel/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-dltedo8y7y

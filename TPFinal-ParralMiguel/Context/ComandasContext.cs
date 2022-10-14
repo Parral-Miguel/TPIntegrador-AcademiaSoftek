@@ -1,7 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Design;
 using TPFinal_ParralMiguel.Models;
-using TPFinalParralMiguel.Migrations;
 using TPFinal_ParralMiguel.Controllers;
 
 
@@ -10,6 +9,12 @@ namespace TPFinal_ParralMiguel.Context
 {
     public class ComandasContext : DbContext
     {
+        
+        //Definicion de las entidades del context. Lo que represento en BBDD
+        public DbSet<Usuario> Usuarios { get; set; }
+        public DbSet<Plato> Platos { get; set; }
+        public DbSet<Pedido> Pedidos { get; set; }
+
         public ComandasContext()
         {
         }
@@ -18,16 +23,11 @@ namespace TPFinal_ParralMiguel.Context
         {
         }
 
-        //Definicion de las entidades del context. Lo que represento en BBDD
-        public DbSet<Usuario> Usuarios { get; set; }
-        public DbSet<Plato> Platos { get; set; }
-        public DbSet<Pedido> Pedidos { get; set; }
-
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             if (!optionsBuilder.IsConfigured)
             {
-                optionsBuilder.UseSqlServer("Server=.;Database=ConexionBBDD;Trusted_Connection=True;");
+                optionsBuilder.UseSqlServer("Server=NicoCPU;Database=CocinaBBDD;Trusted_Connection=True;");
             }
         }
 
@@ -60,7 +60,7 @@ namespace TPFinal_ParralMiguel.Context
                 modelBuilder.Entity<Plato>().HasData(
                 new Plato
                 {
-                    PlatoId = 1,
+                    PlatoId = Guid.NewGuid().ToString(),
                     PlatoNombre = "Milanesa con guarnición",
                     PlatoPrecio = 1500,
                     PlatoCantidad = 0
@@ -68,7 +68,7 @@ namespace TPFinal_ParralMiguel.Context
 
                 new Plato
                 {
-                    PlatoId = 2,
+                    PlatoId = Guid.NewGuid().ToString(),
                     PlatoNombre = "Plato de pastas",
                     PlatoPrecio = 1200,
                     PlatoCantidad = 0
@@ -77,7 +77,7 @@ namespace TPFinal_ParralMiguel.Context
 
                 new Plato
                 {
-                    PlatoId = 3,
+                    PlatoId = Guid.NewGuid().ToString(),
                     PlatoNombre = "Hamburguesa con guarnición",
                     PlatoPrecio = 1600,
                     PlatoCantidad = 0
@@ -86,7 +86,7 @@ namespace TPFinal_ParralMiguel.Context
 
                 new Plato
                 {
-                    PlatoId = 4,
+                    PlatoId = Guid.NewGuid().ToString(),
                     PlatoNombre = "Gaseosa linea Pepsi",
                     PlatoPrecio = 750,
                     PlatoCantidad = 0
@@ -105,6 +105,9 @@ namespace TPFinal_ParralMiguel.Context
                 //Primary key
                 Pedido.HasKey(p => p.PedidoId);
 
+                Pedido.Property(p => p.PedidoUsuarioId)
+                .HasColumnName("pedidoUsuarioId");
+                
                 Pedido.Property(p => p.PedidoPreparado)
                 .HasColumnName("pedidoPreparado");
 
@@ -150,7 +153,7 @@ namespace TPFinal_ParralMiguel.Context
             modelBuilder.Entity<Usuario>().HasData(
                 new Usuario
                 {
-                    UsuarioId = 1,
+                    UsuarioId = Guid.NewGuid().ToString(),
                     UsuarioNombre = "Pepe",
                     UsuarioRol = "Admin",
                     UsuarioMail = "pepe@gmail.com",
@@ -158,7 +161,7 @@ namespace TPFinal_ParralMiguel.Context
                 },
                 new Usuario
                 {
-                    UsuarioId = 2,
+                    UsuarioId = Guid.NewGuid().ToString(),
                     UsuarioNombre = "Lucia",
                     UsuarioRol = "SuperAdmin",
                     UsuarioMail = "luci@gmail.com",
@@ -167,7 +170,7 @@ namespace TPFinal_ParralMiguel.Context
 
                 new Usuario
                 {
-                    UsuarioId = 3,
+                    UsuarioId = Guid.NewGuid().ToString(),
                     UsuarioNombre = "Jose",
                     UsuarioRol = "User",
                     UsuarioMail = "jose@gmail.com",

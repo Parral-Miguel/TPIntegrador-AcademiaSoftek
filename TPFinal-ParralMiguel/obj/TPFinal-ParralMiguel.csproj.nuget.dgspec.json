@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\parra\\source\\repos\\TPFinal-ParralMiguel\\TPFinal-ParralMiguel\\TPFinal-ParralMiguel.csproj": {}
+    "C:\\Users\\parra\\Desktop\\TPIntegrador-AcademiaSoftek\\TPFinal-ParralMiguel\\TPFinal-ParralMiguel.csproj": {}
   },
   "projects": {
-    "C:\\Users\\parra\\source\\repos\\TPFinal-ParralMiguel\\TPFinal-ParralMiguel\\TPFinal-ParralMiguel.csproj": {
+    "C:\\Users\\parra\\Desktop\\TPIntegrador-AcademiaSoftek\\TPFinal-ParralMiguel\\TPFinal-ParralMiguel.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\parra\\source\\repos\\TPFinal-ParralMiguel\\TPFinal-ParralMiguel\\TPFinal-ParralMiguel.csproj",
+        "projectUniqueName": "C:\\Users\\parra\\Desktop\\TPIntegrador-AcademiaSoftek\\TPFinal-ParralMiguel\\TPFinal-ParralMiguel.csproj",
         "projectName": "TPFinal-ParralMiguel",
-        "projectPath": "C:\\Users\\parra\\source\\repos\\TPFinal-ParralMiguel\\TPFinal-ParralMiguel\\TPFinal-ParralMiguel.csproj",
+        "projectPath": "C:\\Users\\parra\\Desktop\\TPIntegrador-AcademiaSoftek\\TPFinal-ParralMiguel\\TPFinal-ParralMiguel.csproj",
         "packagesPath": "C:\\Users\\parra\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\parra\\source\\repos\\TPFinal-ParralMiguel\\TPFinal-ParralMiguel\\obj\\",
+        "outputPath": "C:\\Users\\parra\\Desktop\\TPIntegrador-AcademiaSoftek\\TPFinal-ParralMiguel\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\parra\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -76,9 +76,21 @@
               "target": "Package",
               "version": "[7.0.0-rc.1.22426.7, )"
             },
+            "Microsoft.VisualStudio.Web.CodeGeneration": {
+              "target": "Package",
+              "version": "[6.0.10, )"
+            },
             "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
               "target": "Package",
-              "version": "[6.0.9, )"
+              "version": "[6.0.10, )"
+            },
+            "Microsoft.VisualStudio.Web.CodeGeneration.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[6.0.10, )"
+            },
+            "Microsoft.VisualStudio.Web.CodeGenerators.Mvc": {
+              "target": "Package",
+              "version": "[6.0.10, )"
             }
           },
           "imports": [

@@ -1,0 +1,3 @@
+Usuario SuperAdmin de pueba
+nombre = Lucia
+Contraseña = 456

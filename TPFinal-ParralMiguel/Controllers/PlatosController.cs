@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Mvc.Rendering;
+﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using TPFinal_ParralMiguel.Context;
 using TPFinal_ParralMiguel.Models;
@@ -29,7 +24,7 @@ namespace TPFinal_ParralMiguel.Controllers
 
         // GET: Platos/Details/5
         [Authorize(Roles = "Admin, SuperAdmin")]
-        public async Task<IActionResult> Details(int? id)
+        public async Task<IActionResult> Details(string? id)
         {
             if (id == null || _context.Platos == null)
             {
@@ -53,13 +48,14 @@ namespace TPFinal_ParralMiguel.Controllers
         }
 
         // POST: Platos/Create
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [Authorize(Roles = "Admin, SuperAdmin")]
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("PlatoId,PlatoNombre,PlatoPrecio,PlatoCantidad")] Plato plato)
+        public async Task<IActionResult> Create(Plato plato)
         {
+            string nuevaId = Guid.NewGuid().ToString();
+            plato.PlatoId = nuevaId;
+
             if (ModelState.IsValid)
             {
                 _context.Add(plato);
@@ -70,7 +66,7 @@ namespace TPFinal_ParralMiguel.Controllers
         }
 
         // GET: Platos/Edit/5
-        public async Task<IActionResult> Edit(int? id)
+        public async Task<IActionResult> Edit(string? id)
         {
             if (id == null || _context.Platos == null)
             {
@@ -86,12 +82,10 @@ namespace TPFinal_ParralMiguel.Controllers
         }
 
         // POST: Platos/Edit/5
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [Authorize(Roles = "Admin, SuperAdmin")]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("PlatoId,PlatoNombre,PlatoPrecio,PlatoCantidad")] Plato plato)
+        public async Task<IActionResult> Edit(string id, Plato plato)
         {
             if (id != plato.PlatoId)
             {
@@ -116,14 +110,14 @@ namespace TPFinal_ParralMiguel.Controllers
                         throw;
                     }
                 }
-                return RedirectToAction(nameof(Index));
+                return RedirectToAction("Index", "Platos");
             }
-            return View(plato);
+            return View("Index", "Platos");
         }
 
         // GET: Platos/Delete/5
         [Authorize(Roles = "Admin, SuperAdmin")]
-        public async Task<IActionResult> Delete(int? id)
+        public async Task<IActionResult> Delete(string? id)
         {
             if (id == null || _context.Platos == null)
             {
@@ -144,7 +138,7 @@ namespace TPFinal_ParralMiguel.Controllers
         [HttpPost, ActionName("Delete")]
         [Authorize(Roles = "Admin, SuperAdmin")]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> DeleteConfirmed(int id)
+        public async Task<IActionResult> DeleteConfirmed(string id)
         {
             if (_context.Platos == null)
             {
@@ -157,10 +151,10 @@ namespace TPFinal_ParralMiguel.Controllers
             }
             
             await _context.SaveChangesAsync();
-            return RedirectToAction(nameof(Index));
+            return RedirectToAction("Index", "Platos");
         }
 
-        private bool PlatoExists(int id)
+        private bool PlatoExists(string id)
         {
           return _context.Platos.Any(e => e.PlatoId == id);
         }

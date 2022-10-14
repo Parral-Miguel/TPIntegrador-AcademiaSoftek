@@ -2,15 +2,13 @@
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Mvc;
 using System.Security.Claims;
-using Microsoft.AspNetCore.Authorization;
 using TPFinal_ParralMiguel.Models;
-using Microsoft.Identity.Client;
 using TPFinal_ParralMiguel.Context;
 
 namespace TPFinal_ParralMiguel.Controllers
 {
     //Controladores para el login
-    [AllowAnonymous]
+    
     public class LoginController : Controller
     {
         private ComandasContext _context;
@@ -26,6 +24,7 @@ namespace TPFinal_ParralMiguel.Controllers
         }
 
         //Metodo Post
+        [AllowAnonymous]
         [HttpPost]
         public async Task<IActionResult> Index(Usuario _user)
         {
@@ -73,33 +72,22 @@ namespace TPFinal_ParralMiguel.Controllers
         /// </summary>
         /// <param name="usuario1"></param>
         /// <returns></returns>
+        [AllowAnonymous]
         [HttpPost]
-        public IActionResult Registrar(Usuario usuario1)
+        public async Task<IActionResult> Registrar(Usuario usuario)
         {
+            string nuevaId = Guid.NewGuid().ToString();
+            usuario.UsuarioId = nuevaId;
+            usuario.UsuarioRol = "User";
+
             if (ModelState.IsValid)
             {
                 var usuarios = _context.Usuarios;
-                foreach (Usuario usuario in usuarios)
-                {
-                    if (usuario.UsuarioMail == usuario1.UsuarioMail)
-                    {
-
-                        return RedirectToAction("Index");
-
-                    }
-                }
-                usuario1.UsuarioRol = "User";
-
-                if (usuario1.UsuarioMail is not null && usuario1.UsuarioNombre is not null && usuario1.Contrasenia is not null)
-                {
-                    usuarios.Add(usuario1);
-
-                }
-                _context.SaveChanges();
+                await usuarios.AddAsync(usuario);
+                await _context.SaveChangesAsync();
                 return RedirectToAction("Index", "Login");
             }
-            
-            return RedirectToAction("Index");
+            return View("Index", "Login");
         }
 
         /// <summary>

@@ -1,11 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+﻿
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
+using System.Drawing;
 using TPFinal_ParralMiguel.Context;
 using TPFinal_ParralMiguel.Models;
 
@@ -30,7 +26,7 @@ namespace TPFinal_ParralMiguel.Controllers
 
         // GET: Usuarios/Details/5
         [Authorize(Roles = "SuperAdmin")]
-        public async Task<IActionResult> Details(int? id)
+        public async Task<IActionResult> Details(string? id)
         {
             if (id == null || _context.Usuarios == null)
             {
@@ -58,20 +54,24 @@ namespace TPFinal_ParralMiguel.Controllers
         [HttpPost]
         [Authorize (Roles = "SuperAdmin")]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("UsuarioId,UsuarioNombre,UsuarioMail,Contrasenia,UsuarioRol")] Usuario usuario)
+        public async Task<IActionResult> Create(Usuario usuario)
         {
+            string nuevaId = Guid.NewGuid().ToString();
+            usuario.UsuarioId = nuevaId;
+
             if (ModelState.IsValid)
             {
-                _context.Add(usuario);
+                var usuarios = _context.Usuarios;
+                await usuarios.AddAsync(usuario);
                 await _context.SaveChangesAsync();
-                return RedirectToAction(nameof(Index));
+                return RedirectToAction("Index", "Usuarios");
             }
-            return View(usuario);
+            return View("Index", "Usuarios");
         }
 
         // GET: Usuarios/Edit/5
         [Authorize(Roles = "SuperAdmin")]
-        public async Task<IActionResult> Edit(int? id)
+        public async Task<IActionResult> Edit(string? id)
         {
             if (id == null || _context.Usuarios == null)
             {
@@ -92,7 +92,7 @@ namespace TPFinal_ParralMiguel.Controllers
         [HttpPost]
         [ValidateAntiForgeryToken]
         [Authorize(Roles = "SuperAdmin")]
-        public async Task<IActionResult> Edit(int? id, [Bind("UsuarioId,UsuarioNombre,UsuarioMail,Contrasenia,UsuarioRol")] Usuario usuario)
+        public async Task<IActionResult> Edit(string? id, Usuario usuario)
         {
             if (id != usuario.UsuarioId)
             {
@@ -117,14 +117,14 @@ namespace TPFinal_ParralMiguel.Controllers
                         throw;
                     }
                 }
-                return RedirectToAction(nameof(Index));
+                return RedirectToAction("Index", "Usuarios");
             }
             return View(usuario);
         }
 
         // GET: Usuarios/Delete/5
         [Authorize(Roles = "SuperAdmin")]
-        public async Task<IActionResult> Delete(int? id)
+        public async Task<IActionResult> Delete(string? id)
         {
             if (id == null || _context.Usuarios == null)
             {
@@ -145,7 +145,7 @@ namespace TPFinal_ParralMiguel.Controllers
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         [Authorize(Roles = "SuperAdmin")]
-        public async Task<IActionResult> DeleteConfirmed(int? id)
+        public async Task<IActionResult> DeleteConfirmed(string? id)
         {
             if (_context.Usuarios == null)
             {
@@ -158,10 +158,10 @@ namespace TPFinal_ParralMiguel.Controllers
             }
             
             await _context.SaveChangesAsync();
-            return RedirectToAction(nameof(Index));
+            return RedirectToAction("Index", "Usuarios");
         }
 
-        private bool UsuarioExists(int? id)
+        private bool UsuarioExists(string? id)
         {
           return _context.Usuarios.Any(e => e.UsuarioId == id);
         }
